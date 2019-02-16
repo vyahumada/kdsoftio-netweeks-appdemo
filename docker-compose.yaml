@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  webapi:
+    image: kdsoftio/netweeks-demo-api:1.0
+    ports:
+      - 8886:80
+
+  webapp:
+    image: kdsoftio/netweeks-demo-app:1.0
+    ports:
+      - 8885:80
+    depends_on:
+      - webapi
