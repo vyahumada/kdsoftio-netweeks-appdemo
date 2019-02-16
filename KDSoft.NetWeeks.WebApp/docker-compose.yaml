@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+  webapi:
+    image: kdsoftio/netweeks-demo-api:1.0
+    ports:
+      - 8886:80
+
+  webapp:
+    image: nginx:1.15-alpine
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./app/:/usr/share/nginx/html:ro 
+    depends_on:
+      - webapi
+    ports:
+      - 8885:80

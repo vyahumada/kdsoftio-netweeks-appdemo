@@ -45,7 +45,7 @@ namespace KDSoft.NetWeeks.API.Controllers
             return BadRequest("No se pudo crear el libro");
         }
         
-        [HttpPut]
+        [HttpPut("{id}")]
         public IActionResult ModificarLibro(int id, [FromBody]Libro libro)
         {
             var libroModificado = _context.Libros.FirstOrDefault(p => p.Id == id);

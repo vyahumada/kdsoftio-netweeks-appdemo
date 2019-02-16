@@ -7,7 +7,7 @@ namespace KDSoft.NetWeeks.API.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Nombre es requerido")]
         public string Nombre { get; set; }
 
         public DateTime? FechaEdicion { get; set; }
@@ -16,7 +16,7 @@ namespace KDSoft.NetWeeks.API.Models
 
         public bool? EnStock { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Categoría es requerida")]
         public int? Id_Categoria { get; set; }
 
         public Categoria Categoria { get; set; }

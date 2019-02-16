@@ -6,7 +6,7 @@ namespace KDSoft.NetWeeks.API.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Nombre es requerido")]
         public string Nombre { get; set; }
     }
 }
