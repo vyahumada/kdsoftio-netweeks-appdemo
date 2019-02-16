@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "b6a700e4-90cb-4c67-a8bf-ecb6c247fc87",
+		"name": "KDSoft - NetWeeks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Libros",
+			"item": [
+				{
+					"name": "/api/Libros/ObtenerLibros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/Libros/ObtenerLibros",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Libros",
+								"ObtenerLibros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/Libros/ObtenerLibroxId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/Libros/ObtenerLibroXid/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Libros",
+								"ObtenerLibroXid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/Libros/CrearLibro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Nombre\": \"Mi Librito de Cuentos\",\n    \"FechaEdicion\": \"2019-02-14\",\n    \"Edicion\": \"1ra\",\n    \"EnStock\": true,\n    \"id_categoria\": 1\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/Libros",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Libros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/Libros/ModificarLibro",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Nombre\": \"Mi Librito de Cuentos\",\n    \"FechaEdicion\": \"2019-02-14\",\n    \"Edicion\": \"3ra\",\n    \"EnStock\": false,\n    \"id_categoria\": 1\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/Libros/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Libros",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/Libros/EliminarLibro",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/Libros/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Libros",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categorías",
+			"item": [
+				{
+					"name": "/api/Categorias/ObtenerCategorias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/Categorias/ObtenerCategorias",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Categorias",
+								"ObtenerCategorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/Categorias/ObtenerCategoriaxId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/Categorias/ObtenerCategoriaXid/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Categorias",
+								"ObtenerCategoriaXid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/Categorias/CrearCategoria",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Nombre\": \"Thriller\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/Categorias",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/Categorias/ModificarCategoria",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Nombre\": \"Terror\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/Categorias/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Categorias",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/Categorias/EliminarCategoria",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/Categorias/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Categorias",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
